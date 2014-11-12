@@ -1,1 +1,9 @@
-console.log('\'Allo \'Allo!');
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    slideshow: "true",
+    slideshowSpeed: 4000,
+    controlNav: false,
+    directionNav: false,
+  });
+})
