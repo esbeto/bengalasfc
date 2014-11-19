@@ -5,5 +5,6 @@ $(window).load(function() {
     slideshowSpeed: 4000,
     controlNav: false,
     directionNav: false,
+    pauseOnAction: false
   });
 })

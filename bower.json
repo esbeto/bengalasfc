@@ -3,9 +3,15 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
-    "modernizr": "~2.8.2"
-  },
-  "devDependencies": {
+    "modernizr": "~2.8.2",
     "flexslider": "*"
+  },
+  "overrides": {
+    "flexslider": {
+      "main": [
+        "jquery.flexslider-min.js",
+        "flexslider.css"
+      ]
+    }
   }
 }
