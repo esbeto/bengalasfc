@@ -17,28 +17,49 @@ body {
   padding-right: 15px;
 }
 body {
-  background: url('../images/background.gif') top center no-repeat;
+  background-color: #000;
 }
 .navbar-default {
   background-color: transparent;
   border: none;
 
   > .container {
-    background-color: rgba(#FFF, 0.8);
+    background-color: #444;
   }
-}
 
-.social.nav {
-  float: right;
-  > li {
-    > a {
-      display: inline;
+  .navbar-nav {
+    margin: 75px 40px;
+    > li > a {
+      background-color: #F39812;
+      border-bottom: 2px solid #000;
+      color: #000;
+      font-size: 18px;
+      &:hover {
+        background-color: #EB651A;
+      }
     }
   }
 }
-
-.main-navigation {
-  clear: right;
+.navbar-header {
+  float: left;
+}
+.title {
+  color: #F00;
+  position: absolute;
+  top: 0;
+}
+.social.nav {
+  float: right;
+  margin-top: 40px;
+  > li {
+    > a {
+      color: #FFF;
+      display: block;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
 }
 
 /* Custom page header */
@@ -52,6 +73,11 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+
+.navbar-brand {
+  display: block;
+  padding: 0;
+  height: auto;
 }
 
 /* all links */
