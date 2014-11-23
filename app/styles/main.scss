@@ -2,6 +2,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
+$orange: #F39812;
+$red: #EB651A;
 
 /* Space out content a bit */
 body {
@@ -17,7 +19,12 @@ body {
   padding-right: 15px;
 }
 body {
-  background-color: #000;
+  background-color: #222;
+}
+
+.bs-docs-sidebar {
+  background-color: #444;
+  margin-bottom: 40px;
 }
 .navbar-default {
   background-color: transparent;
@@ -25,17 +32,19 @@ body {
 
   > .container {
     background-color: #444;
+    position: relative;
   }
 
   .navbar-nav {
-    margin: 75px 40px;
+    margin: 95px 40px 40px;
     > li > a {
-      background-color: #F39812;
+      background-color: $orange;
       border-bottom: 2px solid #000;
       color: #000;
       font-size: 18px;
+      &.active,
       &:hover {
-        background-color: #EB651A;
+        background-color: $red;
       }
     }
   }
@@ -43,11 +52,17 @@ body {
 .navbar-header {
   float: left;
 }
+
 .title {
-  color: #F00;
+  color: #FFF;
+  font-size: 36px;
+  font-weight: normal;
   position: absolute;
   top: 0;
+  text-align: center;
+  width: 100%;
 }
+
 .social.nav {
   float: right;
   margin-top: 40px;
@@ -73,6 +88,7 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+}
 
 .navbar-brand {
   display: block;
@@ -82,9 +98,12 @@ body {
 
 /* all links */
 .bs-docs-sidebar .nav > li > a {
-  color: #999;
+  color: #FFF;
   font-size: 14px;
   font-weight: 400;
+  &:hover {
+    background-color: $orange;
+  }
 }
 
 /* nested links */
@@ -100,6 +119,7 @@ body {
     max-width: 100%;
   }
 }
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -109,6 +129,19 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+.content {
+  background-color: #FFF;
+  color: #000;
+  font-size: 16px;
+  padding: 40px 60px;
+  margin-bottom: 40px;
+  img {
+    height: auto;
+    padding: 20px 0;
+    width: 100%;
+  }
 }
 
 /* Main marketing message and sign up button */
@@ -129,6 +162,10 @@ body {
   }
 }
 
+.firma {
+  text-align: center;
+  margin-top: 40px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
