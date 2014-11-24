@@ -30,6 +30,10 @@ body {
   }
 }
 
+.container {
+  max-width: 970px;
+}
+
 #logo {
   position: absolute;
   top: -60px;
@@ -109,11 +113,11 @@ body {
   margin-top: 0;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #FFF;
-  border-top: 1px solid #e5e5e5;
+.main {
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .content {
@@ -121,13 +125,71 @@ body {
   color: #222;
   font-size: 16px;
   padding: 40px 60px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
+
   img {
     height: auto;
     padding: 20px 0;
     width: 100%;
   }
+
+  h1 {
+    color: $orange;
+    font-size: 64px;
+  }
 }
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #FFF;
+  border-top: 1px solid #e5e5e5;
+  .contacto,
+  .privacidad,
+  .direccion {
+    float: left;
+    padding: 20px;
+    text-align: center;
+    width: 33.333%;
+  }
+
+  .direccion {
+    background: url('../images/mapa.png') center center no-repeat;
+    background-size: cover;
+    a {
+      font-size: 18px;
+      color: #FFF;
+      display: block;
+      font-weight: 300;
+    }
+  }
+  .privacidad {
+    padding: 60px 20px;
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .contacto {
+    font-size: 18px;
+    padding: 45px 20px;
+    a {
+      color: $orange;
+    }
+  }
+}
+body:not(.home) {
+  .footer {
+    background-color: #555;
+    color: #FFF;
+    font-weight: 300;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+
+
 
 .firma {
   text-align: center;
