@@ -7,4 +7,4 @@ $(window).load(function() {
     directionNav: false,
     pauseOnAction: false
   });
-})
+});

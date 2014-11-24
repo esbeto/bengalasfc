@@ -2,11 +2,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 $orange: #F39812;
 $red: #EB651A;
 
 /* Space out content a bit */
 body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -18,122 +20,105 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 body {
   background-color: #222;
+  padding-top: 60px;
+  &.home {
+    background: url('../images/portero_salvando.jpg') no-repeat top center #000;
+    background-size: cover;
+  }
 }
 
-.bs-docs-sidebar {
-  background-color: #444;
-  margin-bottom: 40px;
+#logo {
+  position: absolute;
+  top: -60px;
+  left: 40px;
+  z-index: 999;
 }
+
 .navbar-default {
   background-color: transparent;
   border: none;
+  margin: 0;
 
-  > .container {
-    background-color: #444;
+  .container {
     position: relative;
   }
-
   .navbar-nav {
-    margin: 95px 40px 40px;
+    min-height: 0;
     > li > a {
-      background-color: $orange;
-      border-bottom: 2px solid #000;
-      color: #000;
+      color: #FFF;
       font-size: 18px;
-      &.active,
-      &:hover {
-        background-color: $red;
-      }
+      font-weight: 300;
+      padding: 10px 12px;
     }
   }
 }
-.navbar-header {
-  float: left;
+
+.main-navigation {
+  background-color: $orange;
+  overflow: hidden;
+  padding-left: 200px;
+  text-align: right;
 }
 
-.title {
-  color: #FFF;
-  font-size: 36px;
-  font-weight: normal;
-  position: absolute;
-  top: 0;
-  text-align: center;
-  width: 100%;
+.flexslider {
+  border: none;
 }
 
 .social.nav {
-  float: right;
-  margin-top: 40px;
-  > li {
-    > a {
+  display: block;
+  width: 100%;
+  text-align: right;
+  li {
+    display: inline-block;
+    a {
       color: #FFF;
-      display: block;
+      padding-left: 40px;
       &:hover {
-        background-color: #000;
+        text-decoration: underline;
       }
     }
   }
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+  .facebook {
+    background: url('../images/facebook-logo.png') no-repeat 0 0;
+  }
+  .twitter {
+    background: url('../images/twitter-logo.png') no-repeat 0 5px;
+  }
+  .youtube {
+    background: url('../images/youtube-logo.png') no-repeat 0 8px;
   }
 }
 
-.navbar-brand {
-  display: block;
-  padding: 0;
-  height: auto;
+.taglines {
+  margin: 10em 5em 25em 15em;
+  text-align: right;
 }
-
-/* all links */
-.bs-docs-sidebar .nav > li > a {
+.tagline {
+  color: #000;
+  font-size: 70px;
+  font-weight: bold;
+}
+.subtagline a {
+  background-color: $red;
   color: #FFF;
-  font-size: 14px;
-  font-weight: 400;
-  &:hover {
-    background-color: $orange;
-  }
-}
-
-/* nested links */
-.bs-docs-sidebar .nav .nav > li > a {
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-top: 5px;
-  font-size: 12px;
-}
-
-.main {
-  img {
-    max-width: 100%;
-  }
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
+  color: #FFF;
   border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
 }
 
 .content {
   background-color: #FFF;
-  color: #000;
+  color: #222;
   font-size: 16px;
   padding: 40px 60px;
   margin-bottom: 40px;
@@ -144,49 +129,7 @@ body {
   }
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
 .firma {
   text-align: center;
   margin-top: 40px;
-}
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 960px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
 }
