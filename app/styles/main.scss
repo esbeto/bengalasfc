@@ -50,6 +50,7 @@ body {
     position: relative;
   }
   .navbar-nav {
+    margin: 0;
     min-height: 0;
     > li > a {
       color: #FFF;
@@ -65,16 +66,21 @@ body {
   overflow: hidden;
   padding-left: 200px;
   text-align: right;
+  @media screen and (max-width: 767px) {
+    padding-left: 0;
+  }
 }
 
 .flexslider {
   border: none;
+  margin-bottom: 0;
 }
 
 .social.nav {
   display: block;
   width: 100%;
   text-align: right;
+  padding-left: 210px;
   li {
     display: inline-block;
     a {
@@ -135,7 +141,15 @@ body {
 
   h1 {
     color: $orange;
-    font-size: 60px;
+    font-size: 56px;
+  }
+  .subtagline {
+    text-align: center;
+  }
+
+  .video {
+    margin: 0 auto;
+    width: 560px;
   }
 }
 
@@ -188,9 +202,26 @@ body:not(.home) {
   }
 }
 
-
-
-
+/* contacto */
+.left,
+.right {
+  float: left;
+  padding: 20px 0;
+  width: 50%;
+}
+.enviar {
+  border: none;
+  background-color: $red;
+  color: #FFF;
+  font-weight: normal;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 28px;
+  width: 200px;
+}
+.mensaje {
+  clear: both;
+}
 .firma {
   text-align: center;
   margin-top: 40px;
